@@ -104,6 +104,8 @@ Diese Daten sollen gemeinsam mit einigen Details zum dem Standort ueber eine RES
 
 Gruppengroesse: 1 Person
 
+Die Bewertung erfolgt im Rahmen eines Abnahmegesprächs im Unterricht. Zum Zeitpunkt des Abnahmegesprächs muss die Lösung auf einem Git-Repository hochgeladen worden sein (samt Dokumentation). Im Repository soll eine README Datei hinterlegt sein, wo die wichtigsten Arbeitsschritte und neue Erkenntnisse dokumentiert sind. Ebenso sind aufgetretene Probleme in dem Dokument zu vermerken. Das Dokument soll keinen gesamten Quellcode, sondern nur Code-Snippets enthalten, die mit 2-3 Sätzen erklärt werden.
+
 * Anforderungen "Grundlagen" (2 Punkte)
 
   - Implementierung eines Generator zur Erzeugung der Standort- und Warendaten

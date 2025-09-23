@@ -20,6 +20,8 @@ dependencies {
 	testCompileOnly("org.projectlombok:lombok:1.18.42")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
 }
 
 test {

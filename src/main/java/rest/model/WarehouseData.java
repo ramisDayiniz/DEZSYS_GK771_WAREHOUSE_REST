@@ -23,7 +23,7 @@ public class WarehouseData {
 
 
 
-	private HashSet<ProductData> products;
+	private Set<ProductData> products;
 
 	/**
 	 * Constructor
@@ -62,11 +62,11 @@ public class WarehouseData {
 		return this.products.add(product);
 	}
 
-	public HashSet<ProductData> getProducts() {
+	public Set<ProductData> getProducts() {
 		return products;
 	}
 
-	public void setProducts(HashSet<ProductData> products) {
+	public void setProducts(Set<ProductData> products) {
 		this.products = products;
 	}
 

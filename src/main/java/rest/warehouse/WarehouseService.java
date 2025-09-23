@@ -11,10 +11,8 @@ public class WarehouseService {
     }
 
     public WarehouseData getWarehouseData( String inID ) {
-    	
     	WarehouseSimulation simulation = new WarehouseSimulation();
         return simulation.getData( inID );
-        
     }
     
 }

@@ -5,8 +5,24 @@ import rest.model.WarehouseData;
 
 import java.util.HashSet;
 
+/**
+ * Simulation von Lagerdaten für Demonstrations- und Testzwecke.
+ * Erzeugt Beispiel-Lagerdaten einschließlich Produkte mit zufälligen oder festen Werten.
+ *
+ * @author Ramis Ekici
+ * @version 23-09-2025
+ */
 public class WarehouseSimulation {
 
+
+	/**
+	 * Generiert eine zufällige Gleitkommazahl zwischen Minimum und Maximum.
+	 * Das Ergebnis wird auf 2 Nachkommastellen gerundet.
+	 *
+	 * @param inMinimum Untergrenze
+	 * @param inMaximum Obergrenze
+	 * @return Zufällige Zahl als double
+	 */
 	private double getRandomDouble( int inMinimum, int inMaximum ) {
 
 		double number = ( Math.random() * ( (inMaximum-inMinimum) + 1 )) + inMinimum;
@@ -15,6 +31,13 @@ public class WarehouseSimulation {
 
 	}
 
+	/**
+	 * Generiert eine zufällige ganze Zahl zwischen Minimum und Maximum.
+	 *
+	 * @param inMinimum Untergrenze
+	 * @param inMaximum Obergrenze
+	 * @return Zufällige Zahl als int
+	 */
 	private int getRandomInt( int inMinimum, int inMaximum ) {
 
 		double number = ( Math.random() * ( (inMaximum-inMinimum) + 1 )) + inMinimum;
@@ -23,6 +46,13 @@ public class WarehouseSimulation {
 
 	}
 
+	/**
+	 * Liefert Beispiel-Lagerdaten für ein gegebenes Lager anhand der Lager-ID.
+	 * Enthält feste Produkte mit Beispielwerten.
+	 *
+	 * @param inID ID des Lagers
+	 * @return Lagerdaten als WarehouseData-Objekt
+	 */
 	public WarehouseData getData( String inID ) {
 		WarehouseData data = new WarehouseData();
 		data.setWarehouseID( inID );

@@ -20,6 +20,7 @@
   <tr>
     <th>ID</th><th>Name</th><th>Category</th><th>Unit</th><th>Quantity</th>
   </tr>
+  <!-- Schleife über alle Produkte im Warehouse-Objekt -->
   <tr th:each="p : ${warehouse.products}">
     <td th:text="${p.productID}">ID</td>
     <td th:text="${p.productName}">Name</td>

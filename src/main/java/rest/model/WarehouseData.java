@@ -1,15 +1,18 @@
 package rest.model;
-
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * Repräsentiert ein Lager mit Basisinformationen und einer Menge an Produkten.
+ * Bietet Methoden zum Abrufen und Verwalten von Produkten.
+ *
+ * @author Ramis Ekici
+ * @version 23-09-2025
+ */
 @JacksonXmlRootElement(localName = "warehouse")
 public class WarehouseData {
 	
@@ -26,13 +29,19 @@ public class WarehouseData {
 	private Set<ProductData> products;
 
 	/**
-	 * Constructor
+	 * Standardkonstruktor. Initialisiert den Zeitstempel.
 	 */
 	public WarehouseData() {
 		this.timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 	}
 
 
+	/**
+	 * Liefert ein Produkt anhand seiner ID.
+	 *
+	 * @param productID ID des Produkts
+	 * @return Produkt oder null, falls nicht gefunden
+	 */
 	public ProductData getProduct(String productID) {
 		if (products == null) {
 			return null;
@@ -49,7 +58,12 @@ public class WarehouseData {
 
 
 
-
+	/**
+	 * Fügt ein Produkt dem Lager hinzu, falls es noch nicht vorhanden ist.
+	 *
+	 * @param product Produkt, das hinzugefügt werden soll
+	 * @return true, falls hinzugefügt, sonst false
+	 */
 	public boolean addProduct(ProductData product) {
 		if (this.products == null) {
 			return false;
@@ -62,10 +76,20 @@ public class WarehouseData {
 		return this.products.add(product);
 	}
 
+	/**
+	 * Liefert alle Produkte des Lagers.
+	 *
+	 * @return Menge der Produkte
+	 */
 	public Set<ProductData> getProducts() {
 		return products;
 	}
 
+	/**
+	 * Setzt die Menge der Produkte im Lager.
+	 *
+	 * @param products Menge der Produkte
+	 */
 	public void setProducts(Set<ProductData> products) {
 		this.products = products;
 	}
@@ -102,10 +126,6 @@ public class WarehouseData {
 		this.warehouseCountry = warehouseCountry;
 	}
 
-	/**
-	 * Setter and Getter Methods
-	 */
-
 
 	public String getWarehouseID() {
 		return warehouseID;
@@ -132,7 +152,9 @@ public class WarehouseData {
 	}
 
 	/**
-	 * Methods
+	 * Gibt eine textuelle Darstellung des Lagers zurück.
+	 *
+	 * @return Informationen über das Lager als String
 	 */
 	@Override
 	public String toString() {

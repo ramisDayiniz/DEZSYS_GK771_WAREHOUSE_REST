@@ -1,6 +1,6 @@
-package tradearea.warehouse;
+package rest.warehouse;
 
-import tradearea.model.WarehouseData;
+import rest.model.WarehouseData;
 
 public class WarehouseSimulation {
 	

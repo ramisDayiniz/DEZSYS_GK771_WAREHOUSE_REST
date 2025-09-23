@@ -1,4 +1,4 @@
-package tradearea.model;
+package rest.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

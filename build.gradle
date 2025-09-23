@@ -19,6 +19,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok:1.18.42")
 	testCompileOnly("org.projectlombok:lombok:1.18.42")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
 }
 
 test {

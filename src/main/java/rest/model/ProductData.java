@@ -6,7 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class ProductData {
     public ProductData(){
 
@@ -15,9 +14,17 @@ public class ProductData {
 
     private String productID;
     private String productName;
-    private int productCategory;
+    private String productCategory;
     private String productUnit;
+    private int productQuantity;
 
+    public ProductData(String productID, String productName, String productCategory, String productUnit, int productQuantity) {
+        this.productID = productID;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.productUnit = productUnit;
+        this.productQuantity = productQuantity;
+    }
 
     @Override
     public String toString() {

@@ -23,9 +23,6 @@ public class WarehouseData {
 	private String warehousePostalCode;
 	private String warehouseCity;
 	private String warehouseCountry;
-
-
-
 	private Set<ProductData> products;
 
 	/**
